@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Monocraft';
+  src: url('../assets/fonts/Monocraft.ttc') format('truetype');
+}
+
+h1{
+    font-family: "Monocraft";
+    font-size: 40px;
+    text-align: center;
+    vertical-align: middle;
+}

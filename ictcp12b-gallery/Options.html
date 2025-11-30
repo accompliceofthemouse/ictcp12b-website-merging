@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Options.css">
+    <script src="js/main.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="blur-effect"></div>
+
+    <div class="content"> 
+        <div class="title-container">
+            <h1> SELECT PROJECT </h1>
+        </div>
+
+        <div class="main-container">
+            <a href="Projects.html" class="option" data-descs="Har Har Har Freddy Krueger">
+                <div> 
+                    <img src="assets/imgs/hq720.jpg" class="select"> 
+                    <div class="project-content">
+                        <h2 class="nameselect"> PROJECT 1 </h2>
+                        <p class="refselect"> "I'm nightmare freddy an dim in your head</p>
+                    </div>
+                </div>
+            </a>
+            <a href="Projects.html" class="option" data-descs="ererererererer">
+                <div> 
+                    <img src="assets/imgs/38313854-ll-rvnipfng-v4.webp" class="select"> 
+                    <div class="project-content">
+                        <h2 class="nameselect"> PROJECT 2 </h2>
+                        <p class="refselect"> You're just mad I have a coll trident and you dont</p>
+                    </div>
+                </div>
+            </a>
+            <div> <img> 
+                <div class="project-content">
+                    <h2> PROJECT 3 </h2>
+                    <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
+                </div>
+            </div>
+            <div> <img> 
+                <div class="project-content">
+                    <h2> PROJECT 4 </h2>
+                    <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
+                </div>
+            </div>
+            <div> <img> 
+                <div class="project-content">
+                    <h2> PROJECT 5 </h2>
+                    <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-container">
+            <a href=""> BACK </a>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".option").forEach(item => {
+            item.addEventListener("click", (e) => {
+                e.preventDefault();
+
+                const images = item.querySelector(".select").src;
+                const names = item.querySelector(".nameselect").innerText;
+                const reflection = item.querySelector(".refselect").innerText;
+                const descs = item.dataset.descs;
+
+                localStorage.setItem("images", images);
+                localStorage.setItem("names", names);
+                localStorage.setItem("reflection", reflection);
+                localStorage.setItem("descs", descs);
+
+                window.location.href = "Projects.html"
+            });
+        });
+    </script>
+</body>
+</html>

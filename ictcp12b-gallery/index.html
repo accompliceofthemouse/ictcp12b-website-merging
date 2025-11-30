@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASIPER: ARTWORK EDITION</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+    <div class="background"></div>
+    
+    <div class="container">
+        <div class="title-container">
+            <h1 class="main-title">ICTCP12B</h1>
+            <h2 class="subtitle">ARTWORK EDITION</h2>
+            <div class="chaotic-text">50% MORE CHAOTIC!</div>
+        </div>
+
+        <div class="mc-menu">
+            <div class="mc-button full" onclick="location.href='Type.html'">
+                <div class="title">Art Works</div>
+            </div>
+            
+            <div class="mc-button full" onclick="location.href='dayinlife.html'">
+                <div class="title">A Day In The Life</div>
+            </div>
+            
+            
+            <div class="double">
+                <div class="mc-button full" onclick="location.href='bts.html'">
+                    <div class="title">B.T.S.</div>
+                </div>
+                
+                <div class="mc-button full" onclick="location.href='credits.html'">
+                    <div class="title">Credits</div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <script>
+        // Add click sound effect (optional)
+        document.querySelectorAll('.mc-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // You can add sound effects here if needed
+                console.log('Button clicked:', this.textContent.trim());
+            });
+        });
+
+        // Prevent context menu on buttons for game-like feel
+        document.querySelectorAll('.mc-button').forEach(button => {
+            button.addEventListener('contextmenu', (e) => e.preventDefault());
+        });
+    </script>
+</body>
+</html>
